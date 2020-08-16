@@ -4,7 +4,8 @@ Processo seletivo para oi sami
 
 ## Features
 Buscar/Filtrar Heroís
- Ver detalhes do Herói
+
+Ver detalhes do Herói
 
 ## Arquitetura
 ### Clean architecture  (SOLID) pattern
