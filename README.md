@@ -31,14 +31,20 @@ Com dois módulos **Common**, recursos compartilhados em todos os módulos e **H
 
 ## Constantes
  app_themes.dart - Declação do temas e estilo padrão do app.
+ 
  assests.dart - Referência ao path dos icones/imagem
+ 
  constants.dart - Declação das cores utilizadas em todo o app.
+ 
  strings.dart - Declação de todos os textos, frases e palavras no app.
 
 ## Recursos
  Injeção de dependência com get_it
+ 
  Deploy no appcenter com fastlane
+ 
  Utilização de objetos imutáveis com freezed
+ 
  CI/CD com gitlab ci
 
 
