@@ -7,6 +7,19 @@ Buscar/Filtrar Heroís
 
 Ver detalhes do Herói
 
+## Recursos
+ Injeção de dependência com get_it
+ 
+ Deploy no appcenter com fastlane
+ 
+ Utilização de objetos imutáveis com freezed
+ 
+ CI/CD com codemagic ci
+ 
+ Isolates para melhorar performance
+ 
+
+
 ## Arquitetura
 ### Clean architecture  (SOLID) pattern
 
@@ -39,14 +52,6 @@ Com dois módulos **Common**, recursos compartilhados em todos os módulos e **H
  
  strings.dart - Declação de todos os textos, frases e palavras no app.
 
-## Recursos
- Injeção de dependência com get_it
- 
- Deploy no appcenter com fastlane
- 
- Utilização de objetos imutáveis com freezed
- 
- CI/CD com gitlab ci
 
 
 
