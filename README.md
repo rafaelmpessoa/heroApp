@@ -10,11 +10,7 @@ Ver detalhes do Herói
 ## Recursos
  Injeção de dependência com get_it
  
- Deploy no appcenter com fastlane
- 
  Utilização de objetos imutáveis com freezed
- 
- CI/CD com codemagic ci
  
  Isolates para melhorar performance
  
