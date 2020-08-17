@@ -1,4 +1,8 @@
 # Hero App
+
+[![HERO APP](http://img.youtube.com/vi/cRwaaP_j_ng/0.jpg)](http://www.youtube.com/watch?v=cRwaaP_j_ng)
+
+
 ## Motivação
 Processo seletivo para oi sami
 
@@ -13,6 +17,10 @@ Ver detalhes do Herói
  Utilização de objetos imutáveis com freezed
  
  Isolates para melhorar performance
+ 
+ bloc test
+ 
+ widget test
  
 
 
