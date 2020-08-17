@@ -126,7 +126,7 @@ class SliverDelegate extends SliverPersistentHeaderDelegate {
             children: [
               Text(
                 hero.name,
-                style: Theme.of(context).textTheme.headline2,
+                style: Theme.of(context).textTheme.headline4,
               ),
               Text(
                 hero.biography.firstAppearance,

@@ -1,6 +1,7 @@
 // import 'package:flutter/material.dart';
 
 import 'package:flutter/material.dart';
+import 'package:hero_app/common/presentation/widgets/heart_icon.dart';
 import 'package:hero_app/common/presentation/widgets/skeleton_loading.dart';
 import 'package:hero_app/constant.dart';
 import 'package:hero_app/hero/domain/entities/hero.dart' as domain;
@@ -59,25 +60,32 @@ class HeroCard extends StatelessWidget {
   }
 
   Widget _buildTextContent(domain.Hero hero) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+    return Stack(
       children: [
-        Text(hero.name, style: TextStyle(fontWeight: FontWeight.bold)),
-        const SizedBox(
-          height: kvpading,
+        Positioned(
+          right: 0,
+          child: HeartIcon(),
         ),
-        Text(
-          hero.biography.fullName,
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(hero.name, style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(
+              hero.biography.fullName,
+              style: TextStyle(fontSize: 10),
+            ),
+            Flexible(
+                child: Text(
+              hero.biography.placeOfBirth,
+              style: TextStyle(fontSize: 10),
+            )),
+            HeroPowerCircles(
+              powerStats: hero.powerstats,
+              iconSize: Size(20, 20),
+              showValue: true,
+            )
+          ],
         ),
-        const SizedBox(
-          height: kvpading * 2,
-        ),
-        Flexible(child: Text(hero.biography.placeOfBirth)),
-        HeroPowerCircles(
-          powerStats: hero.powerstats,
-          iconSize: Size(20, 20),
-          showValue: true,
-        )
       ],
     );
   }

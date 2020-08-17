@@ -45,13 +45,9 @@ class HeroRemoteDataSourceImpl extends BaseRemoteData
 
     if (response.statusCode == 200) {
       final parsedResponse = json.decode(response.body);
-      if (parsedResponse['response'] == "success") {
-        final List results = parsedResponse['results'];
+      final List results = parsedResponse['results'];
 
-        return results == null ? [] : compute(parsedInIsolate, results);
-      } else {
-        throw Failures.unexpectedValue(failedValue: parsedResponse['error']);
-      }
+      return results == null ? [] : compute(parsedInIsolate, results);
     } else {
       throw ServerFailure(response.body);
     }

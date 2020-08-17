@@ -16,7 +16,7 @@ class SkeletonLoading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
-      baseColor: Colors.grey.shade300,
+      baseColor: Colors.transparent.withOpacity(.7),
       highlightColor: Colors.white,
       child: Container(
         width: width,

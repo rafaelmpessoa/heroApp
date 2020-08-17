@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hero_app/assets.dart';
 import 'package:hero_app/constant.dart';
@@ -65,23 +66,27 @@ class _HeroPowerFilterState extends State<HeroPowerFilter>
         SizedBox(
           width: khpading,
         ),
-        AnimatedSwitcher(
-          duration: Duration(milliseconds: 300),
+        AnimatedSize(
+          alignment: Alignment.bottomCenter,
+          curve: Curves.easeInOut,
+          vsync: this,
+          duration: Duration(milliseconds: 500),
           child: _isFiltering
               ? Container(
                   child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    _buildSliders(),
-                    FlatButton(
-                      onPressed: _handleApply,
-                      child: Text(
-                        Strings.apply.toUpperCase(),
-                        style: TextStyle(color: kTextColor),
-                      ),
-                    )
-                  ],
-                ))
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      _buildSliders(),
+                      FlatButton(
+                        onPressed: _handleApply,
+                        child: Text(
+                          Strings.apply.toUpperCase(),
+                          style: TextStyle(color: kTextColor),
+                        ),
+                      )
+                    ],
+                  ),
+                )
               : SizedBox(),
         ),
       ],
